@@ -9,3 +9,4 @@
 
 # chezmoi managed files - DO NOT EDIT these directly
 # Edit source files in ~/.local/share/chezmoi/ and run chezmoi update
+dot_config/shell/private_secrets.env
