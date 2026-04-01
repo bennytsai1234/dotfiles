@@ -1,0 +1,4 @@
+bleopt history_share=1
+
+ble-import -d integration/fzf-completion
+ble-import -d integration/fzf-key-bindings

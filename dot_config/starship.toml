@@ -1,0 +1,97 @@
+add_newline = true
+command_timeout = 1200
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$nodejs\
+$python\
+$golang\
+$rust\
+$package\
+$cmd_duration\
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+[character]
+success_symbol = "[›](bold green)"
+error_symbol = "[›](bold red)"
+vimcmd_symbol = "[‹](bold yellow)"
+
+[directory]
+style = "bold #7aa2f7"
+truncation_length = 4
+truncate_to_repo = true
+read_only = " [ro]"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+symbol = "git:"
+style = "bold #a6da95"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold #f5a97f"
+format = "([$all_status$ahead_behind]($style) )"
+
+[cmd_duration]
+min_time = 1500
+style = "dimmed #f5c2e7"
+format = "[took $duration]($style) "
+
+[nodejs]
+symbol = "node:"
+style = "bold #8bd5ca"
+format = "[$symbol($version )]($style)"
+
+[python]
+symbol = "py:"
+style = "bold #f9e2af"
+format = "[$symbol($virtualenv )($version )]($style)"
+
+[golang]
+symbol = "go:"
+style = "bold #89dceb"
+format = "[$symbol($version )]($style)"
+
+[rust]
+symbol = "rs:"
+style = "bold #f5a97f"
+format = "[$symbol($version )]($style)"
+
+[package]
+symbol = "pkg:"
+style = "bold #c6a0f6"
+format = "[$symbol$version]($style) "
+
+[hostname]
+ssh_only = false
+style = "dimmed #939ab7"
+format = "[@$hostname]($style) "
+
+[username]
+show_always = true
+style_user = "bold #cdd6f4"
+style_root = "bold red"
+format = "[$user]($style) "
+
+[os]
+disabled = false
+style = "bold #f38ba8"
+format = "[$symbol]($style)"
+
+[os.symbols]
+Ubuntu = "ubuntu "
+Windows = "win "
+Macos = "mac "
+Arch = "arch "
+Debian = "debian "
+Fedora = "fedora "
+Linux = "linux "

@@ -1,0 +1,11 @@
+# chezmoi source state (managed by chezmoi)
+# Files in this repo are decrypted - do not commit secrets in plaintext
+
+# Age encryption (if used)
+*.age
+
+# Machine-specific secrets (keep local only)
+.secrets.env
+
+# chezmoi managed files - DO NOT EDIT these directly
+# Edit source files in ~/.local/share/chezmoi/ and run chezmoi update
